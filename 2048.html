@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <!--手机页面自适应   大概 也许-->
+    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>2048</title>
+    <link href="./css/2048.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        <header>2048</header>
+        <div id="point">
+            <div id="soccre">
+                <p>分&emsp;数</p>
+                <span id="now"></span>
+            </div>
+            <div id="best">
+                <p>最高分</p>
+                <span id="max"></span>
+            </div>
+            <button id="cancel">撤回</button>
+            <button id="reset">重开</button>
+        </div>
+    </div>
+
+    <div id="container">
+
+    </div>
+    <div id="select">
+        <select id="size">
+            <option value="3">3X3</option>
+            <option value="4" selected>4X4</option>
+            <option value="5">5X5</option>
+            <option value="6">6X6</option>
+            <option value="7">7X7</option>
+            <option value="8">8X8</option>
+        </select>
+    </div>
+    <script src="./js/2048.js"></script>
+</body>
+</html>
