@@ -290,7 +290,7 @@ gamerule.prototype = {
 
 //事件绑定
 window.onload = function () {
-    var gameR = new gamerule;
+    var gameR = new gamerule();
 
     //按钮
     var backBtn = document.getElementById("cancel");//撤销按钮
