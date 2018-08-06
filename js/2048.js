@@ -7,7 +7,7 @@ var gamerule = function () {
     var _gameset, //当前存储
         _lastset, //上一步，用作撤销，只记一步，即只可以撤销一步，并且记录上一步分数
         _new;     //当前新增
-};
+};  
 
 gamerule.prototype = {
     constructor: gamerule,
@@ -29,7 +29,7 @@ gamerule.prototype = {
     draw: function () {
         var container = document.getElementById("container");
         var div;
-        var cellsize = parseFloat(84 / _value) - 1;
+        var cellsize = parseFloat(63 / _value) - 1;
 
         for (var i = 0; i < _size ; i++) {
             div = document.createElement("div");
@@ -61,10 +61,9 @@ gamerule.prototype = {
         for (var i = 0; i < _size ; i++) {
             var div = document.getElementById("cell" + i);
             if (div == null) {
-                this.draw();;
+                this.draw();
             }
 
-            div = document.getElementById("cell" + i);
             div.innerText = "";
             div.style.backgroundColor = "lightgray";
             if (_gameset[i] != 0) {
@@ -197,9 +196,9 @@ gamerule.prototype = {
                     div.innerText = "请重新来过\n";
                     div.setAttribute("id","ad");
                     div.style.textAlign = "center";
-                    div.style.lineHeight = 70 + "vmin";
-                    div.style.width = 84 + "vmin";
-                    div.style.height = 84 + "vmin";
+                    div.style.lineHeight = 56 + "vmin";
+                    div.style.width = 63 + "vmin";
+                    div.style.height = 63 + "vmin";
                     div.style.position = "absolute";
                     container.insertBefore(div, container.childNodes[0]);
                 }
@@ -210,13 +209,12 @@ gamerule.prototype = {
             div.innerText = "你获得了2048的胜利\n";
             div.style.textAlign = "center";
             div.setAttribute("id", "ad");
-            div.style.lineHeight = 70 + "vmin";
-            div.style.width = 84 + "vmin";
-            div.style.height = 84 + "vmin";
+            div.style.lineHeight = 56 + "vmin";
+            div.style.width = 63 + "vmin";
+            div.style.height = 63 + "vmin";
             div.style.position = "absolute";
             container.insertBefore(div, container.childNodes[0]);
         }
-
     },
 
     //具体移动操作
@@ -290,7 +288,7 @@ gamerule.prototype = {
 
 //事件绑定
 window.onload = function () {
-    var gameR = new gamerule();
+    var gameR = new gamerule;
 
     //按钮
     var backBtn = document.getElementById("cancel");//撤销按钮
@@ -358,6 +356,5 @@ window.onload = function () {
     var container = document.getElementById("container");
     container.addEventListener("touchstart", touchstart.bind(this));
     container.addEventListener("touchend", touchend.bind(this));
-
 }
 
