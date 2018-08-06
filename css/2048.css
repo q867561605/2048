@@ -4,28 +4,28 @@
 }
 
 body {
-    margin-top: 8vmin;
+    margin-top: 5vmin;
     background-color: sandybrown;
 }
 
 #header {
-    width: 84vmin;
+    width: 63vmin;
     height: 20vmin;
     margin: 0 auto;
 }
 
 header {
     float: left;
-    width: 36vmin;
-    font-size: 12vmin;
+    width: 30vmin;
+    font-size: 10vmin;
     text-align: center;
 }
 
 #point {
     width: 26vmin;
-    height: 20vmin;
+    height: 18vmin;
     float: left;
-    margin: 0 11vmin;
+    margin: 0 3vmin;
 }
 
 #soccre, #best, #cancel, #reset {
@@ -53,8 +53,8 @@ header {
 
 #container {
     margin: auto;
-    width: 84vmin;
-    height: 84vmin;
+    width: 63vmin;
+    height: 63vmin;
     border-radius: 3%;
     margin-top: 5vmin;
     background-color: darkgray;
